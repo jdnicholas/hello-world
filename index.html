@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SigmaJS example</title>
+<!-- START SIGMA IMPORTS -->
+<script src="assets/js/src/sigma.core.js"></script>
+<script src="assets/js/src/conrad.js"></script>
+<script src="assets/js/src/utils/sigma.utils.js"></script>
+<script src="assets/js/src/utils/sigma.polyfills.js"></script>
+<script src="assets/js/src/sigma.settings.js"></script>
+<script src="assets/js/src/classes/sigma.classes.dispatcher.js"></script>
+<script src="assets/js/src/classes/sigma.classes.configurable.js"></script>
+<script src="assets/js/src/classes/sigma.classes.graph.js"></script>
+<script src="assets/js/src/classes/sigma.classes.camera.js"></script>
+<script src="assets/js/src/classes/sigma.classes.quad.js"></script>
+<script src="assets/js/src/classes/sigma.classes.edgequad.js"></script>
+<script src="assets/js/src/captors/sigma.captors.mouse.js"></script>
+<script src="assets/js/src/captors/sigma.captors.touch.js"></script>
+<script src="assets/js/src/renderers/sigma.renderers.canvas.js"></script>
+<script src="assets/js/src/renderers/sigma.renderers.webgl.js"></script>
+<script src="assets/js/src/renderers/sigma.renderers.svg.js"></script>
+<script src="assets/js/src/renderers/sigma.renderers.def.js"></script>
+<script src="assets/js/src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
+<script src="assets/js/src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
+<script src="assets/js/src/renderers/webgl/sigma.webgl.edges.def.js"></script>
+<script src="assets/js/src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
+<script src="assets/js/src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edges.def.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script>
+<script src="assets/js/src/renderers/canvas/sigma.canvas.extremities.def.js"></script>
+<script src="assets/js/src/renderers/svg/sigma.svg.utils.js"></script>
+<script src="assets/js/src/renderers/svg/sigma.svg.nodes.def.js"></script>
+<script src="assets/js/src/renderers/svg/sigma.svg.edges.def.js"></script>
+<script src="assets/js/src/renderers/svg/sigma.svg.edges.curve.js"></script>
+<script src="assets/js/src/renderers/svg/sigma.svg.labels.def.js"></script>
+<script src="assets/js/src/renderers/svg/sigma.svg.hovers.def.js"></script>
+<script src="assets/js/src/middlewares/sigma.middlewares.rescale.js"></script>
+<script src="assets/js/src/middlewares/sigma.middlewares.copy.js"></script>
+<script src="assets/js/src/misc/sigma.misc.animation.js"></script>
+<script src="assets/js/src/misc/sigma.misc.bindEvents.js"></script>
+<script src="assets/js/src/misc/sigma.misc.bindDOMEvents.js"></script>
+<script src="assets/js/src/misc/sigma.misc.drawHovers.js"></script>
+<!-- END SIGMA IMPORTS -->
+<script src="assets/js/sigma.parsers.json.js"></script>
+<div id="container">
+  <style>
+    #graph-container {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>This is a webpage</h1>
+
+
+
+        <p>My first repository</p>
+
+
+        <p class="view"><a href="https://github.com/jdnicholas/hello-world">View the Project on GitHub <small>jdnicholas/hello-world</small></a></p>
+
+      </header>
+  <div id="graph-container"></div>
+</div>
+<script>
+sigma.parsers.json('assets/data/Densities.json', {
+  container: 'graph-container',
+  settings: {
+      defaultNodeColor: '#ec5148'
+    },
+});
+</script>
